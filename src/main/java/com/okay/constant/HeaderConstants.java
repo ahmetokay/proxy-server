@@ -1,6 +1,6 @@
 package com.okay.constant;
 
-import com.okay.modle.HeaderDto;
+import com.okay.model.HeaderDto;
 
 public class HeaderConstants {
 

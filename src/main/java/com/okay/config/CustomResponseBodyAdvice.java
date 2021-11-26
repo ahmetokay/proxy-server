@@ -1,7 +1,7 @@
 package com.okay.config;
 
 import com.okay.constant.HeaderConstants;
-import com.okay.modle.ResponseDto;
+import com.okay.model.BaseResponseDto;
 import org.springframework.core.MethodParameter;
 import org.springframework.http.MediaType;
 import org.springframework.http.converter.HttpMessageConverter;
@@ -21,8 +21,8 @@ public class CustomResponseBodyAdvice implements ResponseBodyAdvice<Object> {
     @Override
     public Object beforeBodyWrite(Object body, MethodParameter returnType, MediaType selectedContentType, Class<? extends HttpMessageConverter<?>> converterType, ServerHttpRequest request, ServerHttpResponse response) {
 
-        if (body instanceof ResponseDto) {
-            ((ResponseDto) body).setHeader(HeaderConstants.HEADER);
+        if (body instanceof BaseResponseDto) {
+            ((BaseResponseDto) body).setHeader(HeaderConstants.HEADER);
         }
         return body;
     }
