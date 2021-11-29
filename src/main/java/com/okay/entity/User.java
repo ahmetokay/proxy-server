@@ -13,7 +13,7 @@ import javax.persistence.Table;
 public class User extends BaseEntity {
 
     @Column(name = "email")
-    private String eMail;
+    private String email;
 
     @Column(name = "password")
     private String password;
@@ -23,5 +23,4 @@ public class User extends BaseEntity {
 
     @Column(name = "surname")
     private String surname;
-
 }
